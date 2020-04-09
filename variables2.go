@@ -9,13 +9,14 @@ func main() {
 
 	fmt.Println("course is", course)
 
+	// pass by reference. Change the variable directly instead of making a copy
 	changeCourse(&course) // pointer to course
 
-	fmt.Println("course  is now", course)
+	fmt.Println("course is now", course)
 }
 
 func changeCourse(course *string) string {
-	*course = "First look: native docker clustering"
+	*course = "native docker clustering"
 
 	fmt.Println("Trying to change course to", *course)
 
