@@ -16,4 +16,13 @@ func main() {
 
 	fmt.Printf("League titles: %v\nRecent head to heads: %v\n",
 		leagueTitles, recentHead2Head)
+
+	for k, v := range leagueTitles {
+		fmt.Printf("%v -> %v\n", k, v)
+	}
+
+	delete(leagueTitles, "Sunderland")
+
+	fmt.Println(leagueTitles)
+
 }

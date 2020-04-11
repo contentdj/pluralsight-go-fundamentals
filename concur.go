@@ -27,6 +27,7 @@ func main() {
 	}()
 
 	// WARN: if main() exits all goroutines immediately quit!
-
+	fmt.Println("Wait")
 	waitGrp.Wait()
+	fmt.Println("Done")
 }

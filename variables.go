@@ -17,4 +17,9 @@ func main() {
 	fmt.Println("module is", module, "and is type", reflect.TypeOf(module))
 	fmt.Println("memory address of *module* variable is",
 		ptr, "and value is", *ptr)
+
+	// Print environment vars
+	for _, env := range os.Environ() {
+		fmt.Println(env)
+	}
 }
